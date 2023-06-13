@@ -319,6 +319,10 @@ public class DrawerLayoutAdapter extends RecyclerListView.SelectionAdapter {
             items.add(new Item(AyuConstants.DRAWER_TOGGLE_GHOST, msg, R.drawable.ayu_ghost));
             items.add(null);
         }
+        if (AyuConfig.showKillButtonInDrawer) {
+            items.add(new Item(AyuConstants.DRAWER_KILL_APP, LocaleController.getString("KillApp", R.string.KillApp), R.drawable.msg_disable));
+            items.add(null);
+        }
         // --- AyuGram hook
 
         UserConfig me = UserConfig.getInstance(UserConfig.selectedAccount);

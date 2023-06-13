@@ -110,7 +110,7 @@ import com.exteragram.messenger.utils.ChatUtils;
 import com.exteragram.messenger.utils.PopupUtils;
 import com.exteragram.messenger.utils.TranslatorUtils;
 import com.radolyn.ayugram.AyuConfig;
-import com.radolyn.ayugram.messages.AyuState;
+import com.radolyn.ayugram.utils.AyuState;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

@@ -23,7 +23,9 @@ import androidx.core.content.FileProvider;
 
 import com.exteragram.messenger.utils.ChatUtils;
 import com.google.zxing.Dimension;
+import com.radolyn.ayugram.messages.AyuMessagesController;
 
+import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.ContactsController;
@@ -88,6 +90,17 @@ public class MessageDetailsPopupWrapper {
         if (messageObject.messageOwner.date > 0) {
             items.add(new Item(R.drawable.msg_calendar2, LocaleController.getString(R.string.Date), formatTime(messageObject.messageOwner.date, true)));
         }
+
+        // --- AyuGram hook
+
+        if (messageObject.messageOwner.ayuDeleted) {
+            var userId = AccountInstance.getInstance(UserConfig.selectedAccount).getUserConfig().clientUserId;
+            var deleted = AyuMessagesController.getInstance().getMessage(userId, messageObject.messageOwner.dialog_id, messageObject.messageOwner.id);
+            items.add(new Item(R.drawable.msg_calendar2, LocaleController.getString(R.string.DeleteDateMenuText), formatTime(deleted.message.deletedDate, true)));
+        }
+
+        // --- AyuGram hook
+
         if (messageObject.messageOwner.fwd_from != null && messageObject.messageOwner.fwd_from.date > 0 && messageObject.messageOwner.fwd_from.date != messageObject.messageOwner.date) {
             items.add(new Item(R.drawable.msg_recent, LocaleController.getString(R.string.ForwardedDate), formatTime(messageObject.messageOwner.fwd_from.date, true)));
         }

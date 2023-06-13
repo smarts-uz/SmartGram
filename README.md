@@ -4,19 +4,18 @@
 
 ## Features
 
-**AyuGram4A** is built on top of exteraGram, which means we have all the features exteraGram has and
-some of Telegraher's:
+**AyuGram4A** is built on top of exteraGram with reworked patches from Telegraher:
 
 - Built with official keys
 - No emulator detection
 - Screenshots in secret chats
 - Messages history (+ deleted ones)
 - No ads
-- Probably something else, check commits!
+- Probably something else, check commits
 
 ...and **ghost mode**.
 
-Please note that AyuGram does **NOT** include some closed-source exteraGram features.
+AyuGram4A does **NOT** include proprietary exteraGram features.
 
 ## Downloads?
 
@@ -26,17 +25,40 @@ Follow our [Telegram channel](https://t.me/ayugram1338).
 
 Because I'm too lazy, and some Telegraher's features are useless for the most of people.
 
-## How to contribute
+## Want to contribute?
 
 I'd be grateful for any contribution, since I don't really like Java. :)
 
 Work on any feature you want.
 
+## Want to fork?
+
+If you're making a fork, you **should** specify **AyuGram** & **exteraGram** in credits.
+Otherwise open source doesn't really work.
+
+Depending on your GitHub profile, we'll decide send an invite to the proprietary repo or not.
+
+And, if you're a kid that don't really want to give credits properly - go and cry writing boilerplate code.
+
 ## How to build
 
 1. Clone source code using `git clone https://github.com/AyuGram/AyuGram4A.git`
 2. Open the project in Android Studio. It should be opened, **not imported**
-3. You are ready to compile `AyuGram`
+3. Implement the `AyuMessageUtils` & `AyuHistoryHook` classes. It's not that hard, but if you're
+   making your **very** own fork, then you should take some time to write this part of code
+4. Create dummy classes for extera's proprietary methods & classes (in `boost` folder)
+5. Replace `google-services.json` (we don't want to see crash reports from your app...)
+6. Generate application certificate and fill API_KEYS:
+   ```
+   APP_ID = 6
+   APP_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+   MAPS_V2_API = NA
+   
+   SIGNING_KEY_PASSWORD = <...>
+   SIGNING_KEY_ALIAS = <...>
+   SIGNING_KEY_STORE_PASSWORD = <...>
+   ```
+6. You are ready to compile `AyuGram`
 
 - **AyuGram** can be built with **Android Studio** or from the command line with **Gradle**:
 

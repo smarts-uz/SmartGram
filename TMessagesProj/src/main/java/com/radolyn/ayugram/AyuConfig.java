@@ -1,3 +1,12 @@
+/*
+ * This is the source code of AyuGram for Android.
+ *
+ * We do not and cannot prevent the use of our code,
+ * but be respectful and credit the original author.
+ *
+ * Copyright @Radolyn, 2023
+ */
+
 package com.radolyn.ayugram;
 
 import android.app.Activity;
@@ -25,6 +34,7 @@ public class AyuConfig {
     public static boolean keepAliveService;
     public static boolean enableAds;
     public static boolean showGhostToggleInDrawer;
+    public static boolean showKillButtonInDrawer;
     public static boolean WALMode;
 
     private static boolean configLoaded;
@@ -65,6 +75,7 @@ public class AyuConfig {
             // deletedMarkText
             // editedMarkText
             showGhostToggleInDrawer = preferences.getBoolean("showGhostToggleInDrawer", true);
+            showKillButtonInDrawer = preferences.getBoolean("showKillButtonInDrawer", false);
 
             // ~ Debug
             WALMode = preferences.getBoolean("walMode", true);

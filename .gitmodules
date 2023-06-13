@@ -1,0 +1,3 @@
+[submodule "TMessagesProj/src/main/java/com/radolyn/ayugram/proprietary"]
+	path = TMessagesProj/src/main/java/com/radolyn/ayugram/proprietary
+	url = https://github.com/AyuGram/AyuGram4A_proprietary.git

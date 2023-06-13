@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This is the source code of AyuGram for Android.
+  ~
+  ~ We do not and cannot prevent the use of our code,
+  ~ but be respectful and credit the original author.
+  ~
+  ~ Copyright @Radolyn, 2023
+  -->
+
 <resources>
     <string name="AyuPreferences">AyuGram Preferences</string>
 
@@ -24,14 +33,15 @@
     <string name="DeletedMarkText">Deleted mark</string>
     <string name="EditedMarkText">Edited mark</string>
     <string name="ShowGhostToggleInDrawer">Show ghost mode toggle</string>
+    <string name="ShowKllButtonInDrawer">Show kill app button</string>
 
-    <!-- Debug -->
     <string name="CleanDatabase">Clean database</string>
     <string name="WALMode">Enable WAL mode</string>
     <string name="CleanDatabaseNotification">AyuGram database cleaned</string>
 
     <string name="EnableGhostMode">Enable Ghost</string>
     <string name="DisableGhostMode">Disable Ghost</string>
+    <string name="KillApp">Kill App</string>
 
     <string name="GhostModeEnabled">Ghost mode turned on</string>
     <string name="GhostModeDisabled">Ghost mode turned off</string>
@@ -41,6 +51,8 @@
 
     <string name="ReadUntilMenuText">Read until</string>
     <string name="ForwardsRestrictedInfoDeleted">Forwarding of deleted message is not supported.</string>
+
+    <string name="DeleteDateMenuText">Delete Date</string>
 
     <string name="LikelyOfflineStatus">offline ?</string>
 

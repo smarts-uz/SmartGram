@@ -12,7 +12,7 @@ import android.util.Base64;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.radolyn.ayugram.AyuConfig;
 import com.radolyn.ayugram.AyuConstants;
-import com.radolyn.ayugram.messages.AyuState;
+import com.radolyn.ayugram.utils.AyuState;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

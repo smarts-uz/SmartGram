@@ -13,16 +13,16 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity()
-public class EditedMessage {
+public class DeletedMessageReaction {
     @PrimaryKey(autoGenerate = true)
-    public long fakeId;
+    public long fakeReactionId;
 
-    public long userId;
-    public long dialogId;
-    public int messageId;
-    public int editedDate;
+    public long deletedMessageId;
 
-    public String text; // html formatted
-    public String mediaPath; // full path
-    public boolean isDocument;
+    public String emoticon;
+    public long documentId;
+    public boolean isCustom;
+
+    public int count;
+    public boolean selfSelected;
 }

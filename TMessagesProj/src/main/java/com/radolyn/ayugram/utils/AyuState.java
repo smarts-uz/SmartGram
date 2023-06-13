@@ -1,10 +1,18 @@
-package com.radolyn.ayugram.messages;
+/*
+ * This is the source code of AyuGram for Android.
+ *
+ * We do not and cannot prevent the use of our code,
+ * but be respectful and credit the original author.
+ *
+ * Copyright @Radolyn, 2023
+ */
+
+package com.radolyn.ayugram.utils;
 
 public class AyuState {
     private static final Object automaticallyScheduledSync = new Object();
-    private static boolean automaticallyScheduled;
-
     private static final Object allowReadPacketSync = new Object();
+    private static boolean automaticallyScheduled;
     private static boolean allowReadPacket;
 
     public static boolean isAutomaticallyScheduled() {

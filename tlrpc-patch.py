@@ -1,3 +1,12 @@
+'''
+ This is the source code of AyuGram for Android.
+
+ We do not and cannot prevent the use of our code,
+ but be respectful and credit the original author.
+
+ Copyright @Radolyn, 2023
+'''
+
 import re
 
 
@@ -13,6 +22,7 @@ data = r2.sub('restricted = false;', data)
 data = r3.sub('history_deleted = false;', data)
 
 data = data.replace('public boolean noforwards;', 'public boolean noforwards;\n        public boolean ayuNoforwards;')
+data = data.replace('public boolean from_scheduled;', 'public boolean from_scheduled;\n        public boolean ayuDeleted;')
 
 with open('./TMessagesProj/src/main/java/org/telegram/tgnet/TLRPC.java', 'w', encoding='utf-8') as f:
     f.write(data)

@@ -1,0 +1,45 @@
+name: Build release APK
+on:
+  push:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          token: ${{ secrets.GH_TOKEN }}
+
+      - uses: DamianReeves/write-file-action@master
+        with:
+          path: ./API_KEYS
+          contents: |
+            APP_ID = 6
+            APP_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+            MAPS_V2_API = ${{ secrets.MAPS_KEY }}
+            
+            SIGNING_KEY_PASSWORD = ${{ secrets.CERT_KEY }}
+            SIGNING_KEY_ALIAS = ${{ secrets.CERT_KEY }}
+            SIGNING_KEY_STORE_PASSWORD = ${{ secrets.CERT_KEY }}
+          write-mode: overwrite
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew assembleAfatRelease
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: Release APK
+          path: TMessagesProj/build/outputs/apk/afat/release/*.apk

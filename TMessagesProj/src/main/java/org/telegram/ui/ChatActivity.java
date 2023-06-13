@@ -119,8 +119,8 @@ import com.google.zxing.common.detector.MathUtils;
 import com.radolyn.ayugram.AyuConfig;
 import com.radolyn.ayugram.AyuConstants;
 import com.radolyn.ayugram.messages.AyuMessagesController;
-import com.radolyn.ayugram.messages.AyuState;
-import com.radolyn.ayugram.messages.AyuUtils;
+import com.radolyn.ayugram.utils.AyuState;
+import com.radolyn.ayugram.utils.AyuGhostUtils;
 import com.radolyn.ayugram.ui.AyuMessageHistory;
 
 import org.telegram.PhoneFormat.PhoneFormat;
@@ -18525,6 +18525,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                 int mid = messageIds.get(a);
                 MessageObject currentMessage = messagesDict[0].get(mid);
                 if (currentMessage != null) {
+                    currentMessage.messageOwner.ayuDeleted = true;
                     chatAdapter.updateRowWithMessageObject(currentMessage, false);
                 }
             }
@@ -23450,7 +23451,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
         boolean isAyuDeleted =
                 message != null &&
                 message.messageOwner != null &&
-                AyuMessagesController.getInstance().isDeleted(getAccountInstance().getUserConfig().getClientUserId(), dialog_id, message.messageOwner.id);
+                message.messageOwner.ayuDeleted;
         // --- AyuGram hack
 
         boolean allowChatActions = true;
@@ -25728,7 +25729,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                 sendSecretMessageRead(selectedObject, true);
                 break;
             case AyuConstants.OPTION_READ_UNTIL:
-                AyuUtils.markRead(getMessagesController(), getConnectionsManager(), selectedObject);
+                AyuGhostUtils.markRead(getMessagesController(), getConnectionsManager(), selectedObject);
                 break;
             case OPTION_RETRY: {
                 if (selectedObjectGroup != null) {

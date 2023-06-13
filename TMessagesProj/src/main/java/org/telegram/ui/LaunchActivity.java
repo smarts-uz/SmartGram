@@ -96,6 +96,7 @@ import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.AssistActionBuilder;
 import com.radolyn.ayugram.AyuConfig;
 import com.radolyn.ayugram.AyuConstants;
+import com.radolyn.ayugram.AyuUtils;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AccountInstance;
@@ -645,6 +646,8 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
 
                     // update button text
                     NotificationCenter.getInstance(UserConfig.selectedAccount).postNotificationName(NotificationCenter.mainUserInfoChanged);
+                } else if (id == AyuConstants.DRAWER_KILL_APP) {
+                    AyuUtils.killApplication(this);
                 }
                 // --- AyuGram hook
             }

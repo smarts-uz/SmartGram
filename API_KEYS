@@ -1,7 +1,0 @@
-APP_ID = 6
-APP_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
-MAPS_V2_API = NA
-
-SIGNING_KEY_PASSWORD = ayugram
-SIGNING_KEY_ALIAS = ayugram
-SIGNING_KEY_STORE_PASSWORD = ayugram
