@@ -1,10 +1,10 @@
-# SmartGram for Android
+# SmartsGram for Android
 
-![SmartGram Logo](.github/Smart.jpg)
+![SmartsGram Logo](.github/Smart.jpg)
 
 ## Features
 
-**SmartGram** is built on top of AyuGram4A with reworked patches from Telegraher:
+**SmartsGram** is built on top of AyuGram4A with reworked patches from Telegraher:
 
 - Built with official keys
 - No emulator detection
@@ -15,7 +15,7 @@
 
 ...and **ghost mode**.
 
-SmartGram does **NOT** include proprietary exteraGram features.
+SmartsGram does **NOT** include proprietary exteraGram features.
 
 ## Downloads?
 
@@ -33,7 +33,7 @@ Work on any feature you want.
 
 ## Want to fork?
 
-If you're making a fork, you **should** specify **SmartGram** & **AyuGram** in credits.
+If you're making a fork, you **should** specify **SmartsGram** & **AyuGram** in credits.
 Otherwise open source doesn't really work.
 
 Depending on your GitHub profile, we'll decide send an invite to the proprietary repo or not.
@@ -60,20 +60,20 @@ And, if you're a kid that don't really want to give credits properly - go and cr
    ```
 6. You are ready to compile `SmartGram`
 
-- **SmartGram** can be built with **Android Studio** or from the command line with **Gradle**:
+- **SmartsGram** can be built with **Android Studio** or from the command line with **Gradle**:
 
 ```
 ./gradlew assembleAfatRelease
 ```
 
-## SmartGram Localization
+## SmartsGram Localization
 
 [![Crowdin](https://badges.crowdin.net/ayugram/localized.svg)](https://crowdin.com/project/smartsgram)
 [![Crowdin](https://badges.crowdin.net/exteralocales/localized.svg)](https://crowdin.com/project/exteralocales)
 
 We have our own [Crowdin](https://crowdin.com/project/smartsgram).
 
-But since SmartGram is based on **AyuGram**, also join their project
+But since SmartsGram is based on **AyuGram**, also join their project
 at [Crowdin](https://crowdin.com/project/ayugram)!
 
 ## Credits
