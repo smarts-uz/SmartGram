@@ -1,10 +1,10 @@
-# AyuGram for Android
+# SmartGram for Android
 
-![AyuGram Logo](.github/AyuGram.png)
+![SmartGram Logo](.github/Smart.jpg)
 
 ## Features
 
-**AyuGram4A** is built on top of exteraGram with reworked patches from Telegraher:
+**SmartGram** is built on top of AyuGram4A with reworked patches from Telegraher:
 
 - Built with official keys
 - No emulator detection
@@ -15,7 +15,7 @@
 
 ...and **ghost mode**.
 
-AyuGram4A does **NOT** include proprietary exteraGram features.
+SmartGram does **NOT** include proprietary exteraGram features.
 
 ## Downloads?
 
@@ -33,7 +33,7 @@ Work on any feature you want.
 
 ## Want to fork?
 
-If you're making a fork, you **should** specify **AyuGram** & **exteraGram** in credits.
+If you're making a fork, you **should** specify **SmartGram** & **AyuGram** in credits.
 Otherwise open source doesn't really work.
 
 Depending on your GitHub profile, we'll decide send an invite to the proprietary repo or not.
@@ -42,7 +42,7 @@ And, if you're a kid that don't really want to give credits properly - go and cr
 
 ## How to build
 
-1. Clone source code using `git clone https://github.com/AyuGram/AyuGram4A.git`
+1. Clone source code using `git clone https://github.com/smarts-uz/SmartGram.git`
 2. Open the project in Android Studio. It should be opened, **not imported**
 3. Implement the `AyuMessageUtils` & `AyuHistoryHook` classes. It's not that hard, but if you're
    making your **very** own fork, then you should take some time to write this part of code
@@ -58,26 +58,26 @@ And, if you're a kid that don't really want to give credits properly - go and cr
    SIGNING_KEY_ALIAS = <...>
    SIGNING_KEY_STORE_PASSWORD = <...>
    ```
-6. You are ready to compile `AyuGram`
+6. You are ready to compile `SmartGram`
 
-- **AyuGram** can be built with **Android Studio** or from the command line with **Gradle**:
+- **SmartGram** can be built with **Android Studio** or from the command line with **Gradle**:
 
 ```
 ./gradlew assembleAfatRelease
 ```
 
-## AyuGram Localization
+## SmartGram Localization
 
-[![Crowdin](https://badges.crowdin.net/ayugram/localized.svg)](https://crowdin.com/project/ayugram)
+[![Crowdin](https://badges.crowdin.net/ayugram/localized.svg)](https://crowdin.com/project/smartsgram)
 [![Crowdin](https://badges.crowdin.net/exteralocales/localized.svg)](https://crowdin.com/project/exteralocales)
 
-We have our own [Crowdin](https://crowdin.com/project/ayugram).
+We have our own [Crowdin](https://crowdin.com/project/smartsgram).
 
-But since AyuGram is based on **exteraGram**, also join their project
-at [Crowdin](https://crowdin.com/project/exteralocales)!
+But since SmartGram is based on **AyuGram**, also join their project
+at [Crowdin](https://crowdin.com/project/ayugram)!
 
 ## Credits
-
+- [AyuGram](https://github.com/AyuGram/AyuGram4A)
 - [exteraGram](https://github.com/exteraSquad/exteraGram)
 - [Telegraher](https://github.com/nikitasius/Telegraher)
 - [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)
