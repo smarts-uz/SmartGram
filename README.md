@@ -19,7 +19,7 @@ SmartGram does **NOT** include proprietary exteraGram features.
 
 ## Downloads?
 
-Follow our [Telegram channel](https://t.me/ayugram1338).
+Follow our [Telegram channel](https://t.me/Smarts_Uz).
 
 ## Why there's no `X` feature from Telegraher?
 
